@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - thanks
+  - bot_challenge
+  - mail_info
+  - phone_info
+  - work_info
+  - certificat_info
+  - actuality
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, made by hamza islah"
+
+  utter_mail:
+  - text: "here is it: islah-hamza1997@gmail.com"
+
+  utter_phone_ask:
+  - text: "do you want my phone number"
+
+  utter_phone_send:
+  - text: "here is it: 0698141607"
+
+  utter_welcom:
+  - text: "you are welcom"
+
+  utter_more:
+  - text: "did you want another think ?"
+
+  utter_certificat:
+  - text: "see the about info"
+
+  utter_pos_know:
+  - text: "i am looking for a job right know"
+
+  utter_mail_contact:
+  - text: "please contact me in gmail"
+
+  utter_work:
+  - text: "hh"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

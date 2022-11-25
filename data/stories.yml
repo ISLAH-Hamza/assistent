@@ -1,0 +1,75 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: get email
+  steps:
+  - intent: mail_info
+  - action: utter_mail
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: get phone_email
+  steps:
+  - intent: mail_info
+  - action: utter_mail
+  - intent: deny
+  - action: utter_phone_ask
+  - intent: affirm
+  - action: utter_phone_send
+  - intent: thanks
+  - action: utter_welcom
+  - action: utter_more
+  
+- story: phone
+  steps:
+  - intent: phone_info
+  - action: utter_phone_send
+  - intent: thanks 
+  - action: utter_more
+  - intent: deny
+  - action: utter_goodbye
+
+- story: diplom_ask
+  steps:
+  - intent: certificat_info
+  - action: utter_certificat
+  - intent: actuality
+  - action: utter_pos_know
+
+- story: work_request
+  steps:
+  - intent: actuality
+  - action: utter_pos_know
+  - intent: work_info
+  - action: utter_work
+  - action: utter_mail_contact
+  - action: utter_mail
